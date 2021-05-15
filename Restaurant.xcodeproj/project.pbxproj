@@ -13,6 +13,9 @@
 		D9591A2F264DC311009EAC9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9591A2D264DC311009EAC9E /* Main.storyboard */; };
 		D9591A31264DC313009EAC9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9591A30264DC313009EAC9E /* Assets.xcassets */; };
 		D9591A34264DC313009EAC9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9591A32264DC313009EAC9E /* LaunchScreen.storyboard */; };
+		D9CB794526505D2100BA190D /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB794426505D2100BA190D /* CategoryTableViewController.swift */; };
+		D9CB794726505D4000BA190D /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB794626505D4000BA190D /* MenuTableViewController.swift */; };
+		D9CB794926505D4800BA190D /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB794826505D4800BA190D /* OrderTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		D9591A30264DC313009EAC9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9591A33264DC313009EAC9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9591A35264DC313009EAC9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9CB794426505D2100BA190D /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		D9CB794626505D4000BA190D /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		D9CB794826505D4800BA190D /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				D9591A29264DC311009EAC9E /* SceneDelegate.swift */,
 				D9591A2B264DC311009EAC9E /* ViewController.swift */,
 				D9591A2D264DC311009EAC9E /* Main.storyboard */,
+				D9CB794426505D2100BA190D /* CategoryTableViewController.swift */,
+				D9CB794626505D4000BA190D /* MenuTableViewController.swift */,
+				D9CB794826505D4800BA190D /* OrderTableViewController.swift */,
 				D9591A30264DC313009EAC9E /* Assets.xcassets */,
 				D9591A32264DC313009EAC9E /* LaunchScreen.storyboard */,
 				D9591A35264DC313009EAC9E /* Info.plist */,
@@ -140,7 +149,10 @@
 			files = (
 				D9591A2C264DC311009EAC9E /* ViewController.swift in Sources */,
 				D9591A28264DC311009EAC9E /* AppDelegate.swift in Sources */,
+				D9CB794726505D4000BA190D /* MenuTableViewController.swift in Sources */,
 				D9591A2A264DC311009EAC9E /* SceneDelegate.swift in Sources */,
+				D9CB794926505D4800BA190D /* OrderTableViewController.swift in Sources */,
+				D9CB794526505D2100BA190D /* CategoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
