@@ -13,9 +13,13 @@
 		D9591A2F264DC311009EAC9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9591A2D264DC311009EAC9E /* Main.storyboard */; };
 		D9591A31264DC313009EAC9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9591A30264DC313009EAC9E /* Assets.xcassets */; };
 		D9591A34264DC313009EAC9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9591A32264DC313009EAC9E /* LaunchScreen.storyboard */; };
+		D98DA9F5265BCCE10029746D /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DA9F4265BCCE10029746D /* MenuItem.swift */; };
+		D98DA9F7265BCEC80029746D /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DA9F6265BCEC80029746D /* ResponseModels.swift */; };
+		D98DA9F9265BD0270029746D /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DA9F8265BD0270029746D /* Order.swift */; };
 		D9CB794526505D2100BA190D /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB794426505D2100BA190D /* CategoryTableViewController.swift */; };
 		D9CB794726505D4000BA190D /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB794626505D4000BA190D /* MenuTableViewController.swift */; };
 		D9CB794926505D4800BA190D /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB794826505D4800BA190D /* OrderTableViewController.swift */; };
+		D9E2CF4D2656A2B700B998F7 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2CF4C2656A2B700B998F7 /* MenuItemDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +31,13 @@
 		D9591A30264DC313009EAC9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9591A33264DC313009EAC9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9591A35264DC313009EAC9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D98DA9F4265BCCE10029746D /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		D98DA9F6265BCEC80029746D /* ResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModels.swift; sourceTree = "<group>"; };
+		D98DA9F8265BD0270029746D /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		D9CB794426505D2100BA190D /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		D9CB794626505D4000BA190D /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		D9CB794826505D4800BA190D /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
+		D9E2CF4C2656A2B700B998F7 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,10 @@
 				D9591A29264DC311009EAC9E /* SceneDelegate.swift */,
 				D9591A2B264DC311009EAC9E /* ViewController.swift */,
 				D9591A2D264DC311009EAC9E /* Main.storyboard */,
+				D9E2CF4C2656A2B700B998F7 /* MenuItemDetailViewController.swift */,
+				D98DA9F4265BCCE10029746D /* MenuItem.swift */,
+				D98DA9F6265BCEC80029746D /* ResponseModels.swift */,
+				D98DA9F8265BD0270029746D /* Order.swift */,
 				D9CB794426505D2100BA190D /* CategoryTableViewController.swift */,
 				D9CB794626505D4000BA190D /* MenuTableViewController.swift */,
 				D9CB794826505D4800BA190D /* OrderTableViewController.swift */,
@@ -149,10 +161,14 @@
 			files = (
 				D9591A2C264DC311009EAC9E /* ViewController.swift in Sources */,
 				D9591A28264DC311009EAC9E /* AppDelegate.swift in Sources */,
+				D98DA9F9265BD0270029746D /* Order.swift in Sources */,
 				D9CB794726505D4000BA190D /* MenuTableViewController.swift in Sources */,
+				D9E2CF4D2656A2B700B998F7 /* MenuItemDetailViewController.swift in Sources */,
 				D9591A2A264DC311009EAC9E /* SceneDelegate.swift in Sources */,
+				D98DA9F5265BCCE10029746D /* MenuItem.swift in Sources */,
 				D9CB794926505D4800BA190D /* OrderTableViewController.swift in Sources */,
 				D9CB794526505D2100BA190D /* CategoryTableViewController.swift in Sources */,
+				D98DA9F7265BCEC80029746D /* ResponseModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
