@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D950BEE1265E67DF009F58CD /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950BEE0265E67DF009F58CD /* MenuController.swift */; };
 		D9591A28264DC311009EAC9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9591A27264DC311009EAC9E /* AppDelegate.swift */; };
 		D9591A2A264DC311009EAC9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9591A29264DC311009EAC9E /* SceneDelegate.swift */; };
 		D9591A2C264DC311009EAC9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9591A2B264DC311009EAC9E /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D950BEE0265E67DF009F58CD /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D9591A24264DC311009EAC9E /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9591A27264DC311009EAC9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9591A29264DC311009EAC9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				D98DA9F4265BCCE10029746D /* MenuItem.swift */,
 				D98DA9F6265BCEC80029746D /* ResponseModels.swift */,
 				D98DA9F8265BD0270029746D /* Order.swift */,
+				D950BEE0265E67DF009F58CD /* MenuController.swift */,
 				D9CB794426505D2100BA190D /* CategoryTableViewController.swift */,
 				D9CB794626505D4000BA190D /* MenuTableViewController.swift */,
 				D9CB794826505D4800BA190D /* OrderTableViewController.swift */,
@@ -164,6 +167,7 @@
 				D98DA9F9265BD0270029746D /* Order.swift in Sources */,
 				D9CB794726505D4000BA190D /* MenuTableViewController.swift in Sources */,
 				D9E2CF4D2656A2B700B998F7 /* MenuItemDetailViewController.swift in Sources */,
+				D950BEE1265E67DF009F58CD /* MenuController.swift in Sources */,
 				D9591A2A264DC311009EAC9E /* SceneDelegate.swift in Sources */,
 				D98DA9F5265BCCE10029746D /* MenuItem.swift in Sources */,
 				D9CB794926505D4800BA190D /* OrderTableViewController.swift in Sources */,
