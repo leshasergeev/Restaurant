@@ -75,7 +75,6 @@
 				D9591A27264DC311009EAC9E /* AppDelegate.swift */,
 				D9591A29264DC311009EAC9E /* SceneDelegate.swift */,
 				D9591A2B264DC311009EAC9E /* ViewController.swift */,
-				D9591A2D264DC311009EAC9E /* Main.storyboard */,
 				D9E2CF4C2656A2B700B998F7 /* MenuItemDetailViewController.swift */,
 				D98DA9F4265BCCE10029746D /* MenuItem.swift */,
 				D98DA9F6265BCEC80029746D /* ResponseModels.swift */,
@@ -87,6 +86,7 @@
 				D9591A30264DC313009EAC9E /* Assets.xcassets */,
 				D9591A32264DC313009EAC9E /* LaunchScreen.storyboard */,
 				D9591A35264DC313009EAC9E /* Info.plist */,
+				D9591A2D264DC311009EAC9E /* Main.storyboard */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
