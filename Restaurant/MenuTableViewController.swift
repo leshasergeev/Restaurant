@@ -12,6 +12,19 @@ class MenuTableViewController: UITableViewController {
 
     let category: String
     
+    var menuItems = [MenuItem]()
+    
+    let menuController = MenuController()
+    
+    let priceFormatter: NumberFormatter = {
+       let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencySymbol = "$"
+        
+        return formatter
+    }()
+    
+    
     init?(coder: NSCoder, category: String){
         self.category = category
         super.init(coder: coder)
@@ -24,29 +37,45 @@ class MenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        menuController.fetchMenuItems(forCategory: category) { (result) in
+            switch result {
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Failed to Fetch Menu Items for \(self.category)", message: error.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            case .success(let menuItems):
+                DispatchQueue.main.async {
+                    self.menuItems = menuItems
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return menuItems.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuItem", for: indexPath)
 
-        // Configure the cell...
+        let menuItem = menuItems[indexPath.row]
+        
+        cell.textLabel?.text        = menuItem.name
+        cell.detailTextLabel?.text  = priceFormatter.string(from: NSNumber(value: menuItem.price))
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
