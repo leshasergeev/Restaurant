@@ -81,7 +81,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="aKf-Oo-GXz" kind="show" id="RZG-5J-4mx"/>
+                                    <segue destination="aKf-Oo-GXz" kind="show" destinationCreationSelector="showMenuItem:sender:" id="RZG-5J-4mx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -103,10 +103,70 @@
                     <view key="view" contentMode="scaleToFill" id="nhn-XA-i9Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="D3k-fH-a9D">
+                                <rect key="frame" x="15" y="103" width="384" height="283.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.on.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RXx-LH-OKJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="224"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TKk-xj-lTe">
+                                        <rect key="frame" x="0.0" y="232" width="384" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsZ-5s-Oe6">
+                                                <rect key="frame" x="0.0" y="0.0" width="322" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBu-8o-qnl">
+                                                <rect key="frame" x="330" y="0.0" width="54" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iex-n7-Unh">
+                                        <rect key="frame" x="0.0" y="264" width="384" height="19.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vB-OM-KkT">
+                                <rect key="frame" x="15" y="765" width="384" height="33"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Add The Order">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToOrderButtonTapped:" destination="aKf-Oo-GXz" eventType="touchUpInside" id="AYT-D8-Pjv"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="z5S-6C-sJx" firstAttribute="bottom" secondItem="4vB-OM-KkT" secondAttribute="bottom" constant="15" id="Fnc-ew-mo5"/>
+                            <constraint firstItem="RXx-LH-OKJ" firstAttribute="height" secondItem="nhn-XA-i9Y" secondAttribute="height" multiplier="0.25" id="RBa-gb-TdO"/>
+                            <constraint firstItem="z5S-6C-sJx" firstAttribute="trailing" secondItem="D3k-fH-a9D" secondAttribute="trailing" constant="15" id="Ugo-9i-Xxe"/>
+                            <constraint firstItem="z5S-6C-sJx" firstAttribute="trailing" secondItem="4vB-OM-KkT" secondAttribute="trailing" constant="15" id="YSs-n5-cBq"/>
+                            <constraint firstItem="D3k-fH-a9D" firstAttribute="top" secondItem="z5S-6C-sJx" secondAttribute="top" constant="15" id="gmZ-TP-Tsx"/>
+                            <constraint firstItem="4vB-OM-KkT" firstAttribute="leading" secondItem="z5S-6C-sJx" secondAttribute="leading" constant="15" id="nw5-OQ-S9e"/>
+                            <constraint firstItem="D3k-fH-a9D" firstAttribute="leading" secondItem="z5S-6C-sJx" secondAttribute="leading" constant="15" id="vlF-Lw-YUv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="z5S-6C-sJx"/>
                     </view>
                     <navigationItem key="navigationItem" id="qmz-ug-T0q"/>
+                    <connections>
+                        <outlet property="addToOrderButton" destination="4vB-OM-KkT" id="UFM-h4-iWJ"/>
+                        <outlet property="detailTextLabel" destination="Iex-n7-Unh" id="mEs-kx-Xhf"/>
+                        <outlet property="imageView" destination="RXx-LH-OKJ" id="LfF-Vw-ZrT"/>
+                        <outlet property="nameLabel" destination="dsZ-5s-Oe6" id="Mp7-uK-2Kb"/>
+                        <outlet property="priceLabel" destination="cBu-8o-qnl" id="Lzt-9k-wmj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hs2-tC-Glg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,5 +272,6 @@
         <image name="bag" catalog="system" width="64" height="64"/>
         <image name="list.bullet" catalog="system" width="64" height="44"/>
         <image name="list.bullet" width="64" height="44"/>
+        <image name="photo.on.rectangle" catalog="system" width="64" height="48"/>
     </resources>
 </document>

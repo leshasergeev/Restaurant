@@ -10,12 +10,47 @@ import UIKit
 
 class MenuItemDetailViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    let menuItem: MenuItem!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    @IBOutlet weak var detailTextLabel: UILabel!
+    
+    @IBOutlet weak var addToOrderButton: UIButton!
+    
+    init?(coder: NSCoder, menuItem: MenuItem) {
+        self.menuItem = menuItem
+        super.init(coder: coder)
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("MenuItemDetailViewController's init(coder:) has not been implemented")
+    }
+    
+    @IBAction func addToOrderButtonTapped(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.1, options: [], animations: {
+            self.addToOrderButton.transform = CGAffineTransform(scaleX: 1.8, y: 1.8)
+            self.addToOrderButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        addToOrderButton.layer.cornerRadius = 5.0
+        
+        updateUI()
+    }
+    
+    func updateUI() {
+        nameLabel.text       = menuItem.name
+        detailTextLabel.text = menuItem.detailText
+        priceLabel.text      = MenuItem.priceFormatter.string(from: NSNumber(value: menuItem.price))
+    }
 
     /*
     // MARK: - Navigation
