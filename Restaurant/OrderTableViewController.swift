@@ -10,37 +10,38 @@ import UIKit
 
 class OrderTableViewController: UITableViewController {
 
+    var order = Order()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        NotificationCenter.default.addObserver(tableView!, selector: #selector(UITableView.reloadData), name: MenuController.orderUpdatedNotification, object: nil)
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return MenuController.shared.order.menuItems.count
     }
-
-    /*
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Order", for: indexPath)
+        
+        let menuItem = MenuController.shared.order.menuItems[indexPath.row]
+        
+        cell.textLabel?.text        = menuItem.name
+        cell.detailTextLabel?.text  = MenuItem.priceFormatter.string(from: NSNumber(value: menuItem.price))
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

@@ -32,6 +32,9 @@ class MenuItemDetailViewController: UIViewController {
     }
     
     @IBAction func addToOrderButtonTapped(_ sender: UIButton) {
+        
+        MenuController.shared.order.menuItems.append(menuItem)
+        
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.1, options: [], animations: {
             self.addToOrderButton.transform = CGAffineTransform(scaleX: 1.8, y: 1.8)
             self.addToOrderButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
